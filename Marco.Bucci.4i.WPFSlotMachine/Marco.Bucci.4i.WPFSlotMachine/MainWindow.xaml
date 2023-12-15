@@ -1,0 +1,120 @@
+﻿<Window x:Class="Marco.Bucci._4i.WPFSlotMachine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Marco.Bucci._4i.WPFSlotMachine"
+        mc:Ignorable="d"
+        Icon="/Bucci.Marco.4i.WPFSlotMachine;component/Media/piramidi.ico"
+        Title="SlotMachine" MinHeight="720" MinWidth="1280" 
+        WindowStartupLocation="CenterScreen"
+        Background="#1c1c1c">
+
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2.33*"/>
+            <RowDefinition Height="2.33*"/>
+            <RowDefinition Height="2.33*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Media/piramidi.png" Stretch="Uniform" TileMode="None">
+                <ImageBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="1" CenterX="-0.15" ScaleX="0.4" ScaleY="0.4"/>
+                        <SkewTransform CenterX="-0.15" CenterY="1" AngleX="0" AngleY="0"/>
+                        <RotateTransform CenterX="-0.15" CenterY="1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ImageBrush.RelativeTransform>
+            </ImageBrush>
+        </Grid.Background>
+
+
+        <Grid x:Name="Rules" Grid.RowSpan="5" Grid.ColumnSpan="5" Visibility="Visible" Panel.ZIndex="99" Background="#1c1c1c">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Border Margin="25" Padding="30" BorderThickness="3" BorderBrush="#a57c00" Background="#293133" CornerRadius="20" Grid.Column="1">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold" Text="1 - Turni di Gioco:&#xA;&#xA; 1.1 - L'utente ha la possibilità di decidere di tenere una o più lettere apparse per soli due turni di gioco.&#xA; 1.2 - Dopo aver tenuto le lettere, l'utente può scegliere di far girare nuovamente le rotelle o di fermarsi.&#xA;&#xA;2 - Condizioni di Vittoria:&#xA;&#xA; 2.1 - Se si forma una coppia di lettere, l'utente riceve una moneta.&#xA; 2.2 - In presenza di un tris di lettere uguali, vengono restituite un numero di monete pari&#xA;alla posizione della lettera nel'ordine alfabetico del tris (ad esempio, tre D corrispondono a 4 monete).&#xA; 2.3 - Se compaiono tre lettere consecutive (ad esempio, ABC o EFG), l'utente riceve 50 monete.&#xA; 2.4 - Nel caso in cui compaiano tre Z, si verifica il JACKPOT e vengono riceve 100 monetine.&#xA;&#xA;4 - Limitazioni:&#xA;&#xA; 4.1 - L'utente ha il diritto di tenere le lettere solo per due turni&#xA;&#xA;&#xA;Buon divertimento e buona fortuna!"/>
+            </Border>
+            
+            <Button Content="Desidero procedere" FontSize="32" FontFamily="Arial Black" Grid.Column="1" Grid.Row="1" Margin="20" Background="#a57c00" Foreground="White" Click="HideRules_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </Grid>
+        
+        
+
+        <TextBlock Text="FARAONI FORTUNATI" Grid.ColumnSpan="3" Grid.Column="1" FontSize="64" HorizontalAlignment="Center" FontFamily="Arial Black" Margin="0,10" Foreground="#a57c00"/>
+
+
+
+        <Border Margin="25" Padding="5" BorderThickness="3" BorderBrush="#a57c00" Background="#293133" CornerRadius="10" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+            <TextBlock x:Name="Rell1" Text="A" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="256" FontWeight="Bold"/>
+        </Border>
+        <Button  Padding="5" BorderThickness="3"  Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="25" Click="Lock1_Click" Opacity="0"/>
+        <Image Source="/Media/open.png" x:Name="Lock1" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" Stretch="UniformToFill" Height="22" Width="22" />
+
+        <Border Margin="25" Padding="5" BorderThickness="3" BorderBrush="#a57c00" Background="#293133" CornerRadius="10" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+            <TextBlock x:Name="Rell2" Text="A" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="256" FontWeight="Bold"/>
+        </Border>
+        <Button Padding="5" BorderThickness="3"  Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Margin="25" Click="Lock2_Click" Opacity="0"/>
+        <Image Source="/Media/open.png" x:Name="Lock2" Grid.Column="2" Grid.Row="2" VerticalAlignment="Bottom" Stretch="UniformToFill" Height="22" Width="22" />
+
+        <Border Margin="25" Padding="5" BorderThickness="3" BorderBrush="#a57c00" Background="#293133" CornerRadius="10" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2">
+            <TextBlock x:Name="Rell3"  Text="A" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="256" FontWeight="Bold"/>
+        </Border>
+        <Button Padding="5" BorderThickness="3"  Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Margin="25" Click="Lock3_Click" Opacity="0"/>
+        <Image Source="/Media/open.png" x:Name="Lock3" Grid.Column="3" Grid.Row="2" VerticalAlignment="Bottom" Stretch="UniformToFill" Height="22" Width="22" />
+
+
+
+        <Button Content="GIRA" FontSize="72" FontFamily="Arial Black" Grid.Column="2" Grid.Row="3" Margin="20" Background="#a57c00" Foreground="#293133" Click="Spin_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+
+        <Border Margin="25" Padding="5" BorderThickness="3" BorderBrush="#a57c00" Background="#293133" CornerRadius="10" Grid.Column="1" Grid.Row="4" >
+            <TextBlock Text="Prezzo Slot: 1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        </Border>
+
+        <Border Margin="25" Padding="5" BorderThickness="3" BorderBrush="#a57c00" Background="#293133" CornerRadius="10" Grid.Column="2" Grid.Row="4" >
+            <TextBlock x:Name="LastWin" Text="Ultima Vincita: 0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        </Border>
+
+        <Border Margin="25" Padding="5" BorderThickness="3" BorderBrush="#a57c00" Background="#293133" CornerRadius="10" Grid.Column="3" Grid.Row="4" >
+            <TextBlock x:Name="Balance" Text="Saldo: 10" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        </Border>
+    </Grid>
+</Window>

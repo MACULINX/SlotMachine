@@ -48,7 +48,7 @@ namespace Marco.Bucci._4i.CLISlotMachine.Models
                 AddWin(HARDWIN);
 
             else if (SimpleWin())
-                AddWin((int)Rell1 - 64);
+                AddWin(Rell1 - 64);
 
             else if (NoLost())
                 AddWin(1);

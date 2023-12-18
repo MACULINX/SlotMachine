@@ -1,10 +1,11 @@
 ﻿using Marco.Bucci._4i.CLISlotMachine.Models;
 using Figgle;
-using System.Diagnostics.Metrics;
+
 
 
 internal partial class Program
 {
+    Slotmachine slotmachine = new Slotmachine();
     int count1 = 0;
     int count2 = 0; 
     int count3 = 0;
@@ -20,23 +21,29 @@ internal partial class Program
 
     private void MainProgram()
     {
-        Slotmachine slotmachine = new Slotmachine();
         bool menu = true;
-        
+
+        Console.WriteLine(FiggleFonts.Standard.Render("SlotMachine"));
 
         while (menu)
         {
-            Console.Clear();
 
-            Console.WriteLine(FiggleFonts.Standard.Render("SlotMachine"));
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine(FiggleFonts.Standard.Render($"\t {slotmachine.Rell1} | {slotmachine.Rell2} | {slotmachine.Rell3}"));
+            Console.ResetColor();
+
             Console.WriteLine($"\t Credito rimasto {slotmachine.Balance}");
+            Console.WriteLine($"\t Ultima vincita {slotmachine.LastWin}");
+            Console.WriteLine();
 
             Console.WriteLine("1- Gira la Ruota");
 
             Console.WriteLine("2- Blocca la prima lettera");
             Console.WriteLine("3- Blocca la seconda lettera");
             Console.WriteLine("4- Blocca la terza lettera");
+            Console.WriteLine();
+
 
 
 
@@ -82,6 +89,8 @@ internal partial class Program
                         rell1 = true;
                     else
                         rell1 = false;
+
+                    Console.WriteLine(" - Hai bloccato la prima lettera per 2 turni");
                     break;
 
                 case '3':
@@ -89,7 +98,9 @@ internal partial class Program
                         rell2 = true;
                     else
                         rell2 = false;
-                    Checker();
+
+                    Console.WriteLine(" - Hai bloccato la seconda lettera per 2 turni");
+
                     break;
 
                 case '4':
@@ -97,12 +108,14 @@ internal partial class Program
                         rell3 = true;
                     else
                         rell3 = false;
-                    Checker();
+
+                    Console.WriteLine(" - Hai bloccato la terza lettera per 2 turni");
                     break;
 
             }
         }
     }
+
 
     public void Checker() 
     {

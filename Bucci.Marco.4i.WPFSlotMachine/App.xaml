@@ -1,0 +1,9 @@
+﻿<Application x:Class="Marco.Bucci._4i.WPFSlotMachine.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Marco.Bucci._4i.WPFSlotMachine"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

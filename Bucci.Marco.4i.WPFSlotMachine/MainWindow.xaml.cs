@@ -1,4 +1,4 @@
-﻿using Marco.Bucci._4i.WPFSlotMachine.Models;
+﻿using Bucci.Marco._4i.WPFSlotMachine.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace Marco.Bucci._4i.WPFSlotMachine
+namespace Bucci.Marco._4i.WPFSlotMachine
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

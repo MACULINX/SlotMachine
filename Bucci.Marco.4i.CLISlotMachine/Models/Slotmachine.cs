@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Marco.Bucci._4i.CLISlotMachine.Models
+namespace Bucci.Marco._4i.CLISlotMachine.Models
 {
     class Slotmachine
     {

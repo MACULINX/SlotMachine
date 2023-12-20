@@ -1,4 +1,4 @@
-﻿using Marco.Bucci._4i.CLISlotMachine.Models;
+﻿using Bucci.Marco._4i.CLISlotMachine.Models;
 using Figgle;
 
 

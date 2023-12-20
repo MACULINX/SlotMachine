@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-
-namespace Bucci.Marco._4i.WPFSlotMachine.Models
+﻿namespace Bucci.Marco._4i.LibSlotMachine
 {
-    class Slotmachine
+    public class SlotMachine
     {
 
         public int Balance { get; set; }
@@ -21,14 +13,14 @@ namespace Bucci.Marco._4i.WPFSlotMachine.Models
         private const int HARDWIN = 50;
 
 
-        public Slotmachine() { 
-        
+        public SlotMachine()
+        {
             Balance = 10;
             LastWin = 0;
             Rell1 = Rell2 = Rell3 = 'A';
         }
 
-        public void SpinSlotMachine() 
+        public void SpinSlotMachine()
         {
             if (Balance == 0)
                 throw new Exception("Hai finito il saldo a disposizione");
@@ -67,10 +59,10 @@ namespace Bucci.Marco._4i.WPFSlotMachine.Models
 
             Random r = new Random();
 
-            if(!lock1)
+            if (!lock1)
                 Rell1 = (char)r.Next(65, 91);
 
-            if(!lock2)
+            if (!lock2)
                 Rell2 = (char)r.Next(65, 91);
 
             if (!lock3)
@@ -87,7 +79,7 @@ namespace Bucci.Marco._4i.WPFSlotMachine.Models
 
             else if (NoLost())
                 AddWin(1);
-            
+
             else
                 LastWin = 0;
 
@@ -100,19 +92,19 @@ namespace Bucci.Marco._4i.WPFSlotMachine.Models
 
         private bool HardWin()
         {
-            return (Rell2 == Rell1 + 1 && Rell3 == Rell2 + 1);            
+            return (Rell2 == Rell1 + 1 && Rell3 == Rell2 + 1);
         }
-        private bool SimpleWin() 
+        private bool SimpleWin()
         {
             return (Rell1 == Rell2 && Rell2 == Rell3);
         }
 
-        private bool NoLost() 
+        private bool NoLost()
         {
-            return (Rell1 == Rell2 || Rell2 == Rell3 || Rell3 == Rell1);   
+            return (Rell1 == Rell2 || Rell2 == Rell3 || Rell3 == Rell1);
         }
 
-        private void AddWin(int win) 
+        private void AddWin(int win)
         {
             Balance += win;
             LastWin = win;

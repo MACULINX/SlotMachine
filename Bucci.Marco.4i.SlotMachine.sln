@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bucci.Marco.4i.CLISlotMachine", "Bucci.Marco.4i.CLISlotMachine\Bucci.Marco.4i.CLISlotMachine.csproj", "{8BD31DD7-7124-4AC5-968F-B9EE50A4452B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bucci.Marco.4i.WPFSlotMachine", "Bucci.Marco.4i.WPFSlotMachine\Bucci.Marco.4i.WPFSlotMachine.csproj", "{F192F36D-1EBF-45ED-AF04-ADB87056EC1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8BD31DD7-7124-4AC5-968F-B9EE50A4452B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BD31DD7-7124-4AC5-968F-B9EE50A4452B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BD31DD7-7124-4AC5-968F-B9EE50A4452B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F192F36D-1EBF-45ED-AF04-ADB87056EC1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F192F36D-1EBF-45ED-AF04-ADB87056EC1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F192F36D-1EBF-45ED-AF04-ADB87056EC1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F192F36D-1EBF-45ED-AF04-ADB87056EC1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

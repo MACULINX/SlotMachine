@@ -1,11 +1,11 @@
-﻿using Bucci.Marco._4i.CLISlotMachine.Models;
+﻿using Bucci.Marco._4i.LibSlotMachine;
 using Figgle;
 
 
 
 internal partial class Program
 {
-    Slotmachine slotmachine = new Slotmachine();
+    SlotMachine slotmachine = new();
     int count1 = 0;
     int count2 = 0; 
     int count3 = 0;
@@ -13,9 +13,9 @@ internal partial class Program
     bool rell3 = false;
     bool rell2 = false;
 
-    private static void Main(string[] args) 
+    private static void Main() 
     {
-        Program pr = new Program();
+        Program pr = new();
         pr.MainProgram();
     }
 
@@ -66,7 +66,7 @@ internal partial class Program
                         switch (Console.ReadKey().KeyChar)
                         {
                             case 'y':
-                                slotmachine = new Slotmachine();
+                                slotmachine = new SlotMachine();
                                 break;
 
                             case 'n':

@@ -12,4 +12,8 @@
     <PackageReference Include="Figgle" Version="0.5.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Bucci.Marco.4i.LibSlotMachine\Bucci.Marco.4i.LibSlotMachine.csproj" />
+  </ItemGroup>
+
 </Project>

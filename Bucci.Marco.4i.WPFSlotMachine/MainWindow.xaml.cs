@@ -1,4 +1,4 @@
-﻿using Bucci.Marco._4i.WPFSlotMachine.Models;
+﻿using Bucci.Marco._4i.LibSlotMachine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +22,9 @@ namespace Bucci.Marco._4i.WPFSlotMachine
     /// </summary>
     public partial class MainWindow : Window
     {
-        Slotmachine slotmachine = new Slotmachine();
-        BitmapImage closed = new BitmapImage(new Uri("pack://application:,,,/Bucci.Marco.4i.WPFSlotMachine;component/Media/lock.png"));
-        BitmapImage open = new BitmapImage(new Uri("pack://application:,,,/Bucci.Marco.4i.WPFSlotMachine;component/Media/open.png"));
+        SlotMachine slotmachine = new();
+        readonly BitmapImage closed = new(new Uri("pack://application:,,,/Bucci.Marco.4i.WPFSlotMachine;component/Media/lock.png"));
+        readonly BitmapImage open = new(new Uri("pack://application:,,,/Bucci.Marco.4i.WPFSlotMachine;component/Media/open.png"));
 
         int count1, count2, count3 = 0;
 
@@ -37,9 +37,9 @@ namespace Bucci.Marco._4i.WPFSlotMachine
         {
             try
             { 
-                bool c1 = Lock1.Source == closed ? true : false;
-                bool c2 = Lock2.Source == closed ? true : false;
-                bool c3 = Lock3.Source == closed ? true : false;
+                bool c1 = Lock1.Source == closed;
+                bool c2 = Lock2.Source == closed;
+                bool c3 = Lock3.Source == closed;
 
                 slotmachine.SpinSlotMachine(c1,c2,c3);
             }
@@ -130,7 +130,7 @@ namespace Bucci.Marco._4i.WPFSlotMachine
 
         private void Restart()
         {
-            slotmachine = new Slotmachine();
+            slotmachine = new SlotMachine();
             count1 = count2 = count3 = 0;
 
             Updater();

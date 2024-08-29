@@ -43,7 +43,7 @@
         </Grid.Background>
 
 
-        <Grid x:Name="Rules" Grid.RowSpan="5" Grid.ColumnSpan="5" Visibility="Visible" Panel.ZIndex="99" Background="#1c1c1c">
+        <Grid x:Name="Rules" Grid.RowSpan="5" Grid.ColumnSpan="5" Visibility="hidden" Panel.ZIndex="99" Background="#1c1c1c" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition Width="3*"/>
@@ -77,19 +77,19 @@
 
 
         <Border Margin="25" Padding="5" BorderThickness="3" BorderBrush="#a57c00" Background="#293133" CornerRadius="10" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
-            <TextBlock x:Name="Rell1" Text="A" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="256" FontWeight="Bold"/>
+            <TextBlock x:Name="Rell1" Text="A" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="256" FontWeight="Bold" Margin="0,-31,0,0"/>
         </Border>
         <Button  Padding="5" BorderThickness="3"  Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="25" Click="Lock1_Click" Opacity="0"/>
         <Image Source="/Media/open.png" x:Name="Lock1" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" Stretch="UniformToFill" Height="22" Width="22" />
 
         <Border Margin="25" Padding="5" BorderThickness="3" BorderBrush="#a57c00" Background="#293133" CornerRadius="10" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
-            <TextBlock x:Name="Rell2" Text="A" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="256" FontWeight="Bold"/>
+            <TextBlock x:Name="Rell2" Text="A" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="256" FontWeight="Bold" Margin="0,-31,0,0"/>
         </Border>
         <Button Padding="5" BorderThickness="3"  Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Margin="25" Click="Lock2_Click" Opacity="0"/>
         <Image Source="/Media/open.png" x:Name="Lock2" Grid.Column="2" Grid.Row="2" VerticalAlignment="Bottom" Stretch="UniformToFill" Height="22" Width="22" />
 
         <Border Margin="25" Padding="5" BorderThickness="3" BorderBrush="#a57c00" Background="#293133" CornerRadius="10" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2">
-            <TextBlock x:Name="Rell3"  Text="A" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="256" FontWeight="Bold"/>
+            <TextBlock x:Name="Rell3"  Text="A" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="256" FontWeight="Bold" Margin="0,-31,0,0"/>
         </Border>
         <Button Padding="5" BorderThickness="3"  Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Margin="25" Click="Lock3_Click" Opacity="0"/>
         <Image Source="/Media/open.png" x:Name="Lock3" Grid.Column="3" Grid.Row="2" VerticalAlignment="Bottom" Stretch="UniformToFill" Height="22" Width="22" />

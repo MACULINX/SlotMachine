@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "FaFsXZQgSVk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marco\\Desktop\\SlotMachine-main\\Bucci.Marco.4i.WPFSlotMachine\\Bucci.Marco.4i.WPFSlotMachine.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marco\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.19\\microsoft.netcore.app.host.win-x64.7.0.19.nupkg.sha512"
+  ],
+  "logs": []
+}
